@@ -1,6 +1,17 @@
 
 <h2>My Heroes</h2>
 
+
+<div>
+  <label>Hero name:
+    <input #heroName />
+  </label>
+  <!-- (click) passes input value to add() and the clears the input -->
+  <button (click)="add(heroName.value); heroName.value='';">
+    add
+  </button>
+</div>
+
 <ul class="heroes">
    <!--The *ngFor is Angular's repeater directive. It repeats the host element for each element in a list. -->
   <!--
